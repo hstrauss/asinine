@@ -1,0 +1,13 @@
+{
+    "id": "fx-hstools@firefox.l4me.net",
+    "title": "hsTools",
+    "name": "fx-hstools",
+    "version": "0.0.1",
+    "description": "Lookup various network or IP-related details about server connected to.",
+    "main": "index.js",
+    "author": "Heinrich Strauss",
+    "engines": {
+        "firefox": ">=38.0a1"
+    },
+    "license": "GPL-2.0"
+}
