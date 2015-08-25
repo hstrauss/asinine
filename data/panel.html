@@ -3,6 +3,14 @@
 <head>
     <link rel='stylesheet' href='panel.css'>
 </head>
+<script>
+window.onpageshow = function() {
+    console.log("Panel Script running.");
+}
+window.onpagehide = function() {
+    console.log("Panel Script hidden.");
+}
+</script>
 
 <body>
     <h2>Web Site Data</h2>
