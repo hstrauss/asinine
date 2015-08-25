@@ -58,15 +58,15 @@ function panel_show_handler() {
     // button.state('tab', {
     // checked: false
     // });
-    console.log('panel_show_handler()');
+    // console.log('panel_show_handler()');
 }
 
 function tabs_activate_handler(tab) {
-    console.log("tabs_activate_handler(): " + tab.url);
+    // console.log("tabs_activate_handler(): " + tab.url);
 }
 
 function tabs_ready_handler(tab) {
-    console.log("tabs_ready_handler(): " + tab.url);
+    // console.log("tabs_ready_handler(): " + tab.url);
     panel.port.on('respond_info', function (data) {
         console.log('Received emitted message: ' + data);
     });
@@ -74,6 +74,6 @@ function tabs_ready_handler(tab) {
 }
 
 function tabs_load_handler(tab) {
-    console.log("tabs_load_handler(): " + tab.url);
+    // console.log("tabs_load_handler(): " + tab.url);
 }
 

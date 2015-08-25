@@ -1,6 +1,6 @@
-console.log('panel created.');
+// console.log('panel created.');
 window.onload = function () {
-        console.log('window completely loaded.');
+        // console.log('window completely loaded.');
     }
     // self.port.on('fxhs-ready', function (data) {});
 
