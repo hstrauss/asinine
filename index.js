@@ -5,16 +5,19 @@ function dummy(text, callback) {
     callback(text);
 }
 exports.dummy = dummy;
+var {
+    ToggleButton
+} = require('sdk/ui/button/toggle');
 var buttons = require('sdk/ui/button/action');
-var panels = require("sdk/panel");
-var tabs = require("sdk/tabs");
-var button = buttons.ActionButton({
-    id: "hstools-b",
-    label: "Show Network Info",
+var panels = require('sdk/panel');
+var tabs = require('sdk/tabs');
+var button = ToggleButton({
+    id: 'hstools-b',
+    label: 'Show Network Info',
     icon: {
-        "16": "./icon-16.png",
-        "32": "./icon-32.png",
-        "64": "./icon-64.png"
+        '16': './icon-16.png',
+        '32': './icon-32.png',
+        '64': './icon-64.png'
     },
     onClick: button_click_handler
 });
@@ -22,19 +25,22 @@ var panel = panels.Panel({
     width: 200,
     height: 200,
     onHide: panel_hide_handler,
-    contentURL: "./panel.html"
+    contentURL: './panel.html',
+    contentScriptFile: './index_content_script.js'
 });
 
 function button_click_handler(state) {
     if (state.checked) {
-        panel.show();
+        panel.show({
+            position: button
+        });
     } else {
         panel.hide();
     }
 }
 // panel.show();
 function panel_hide_handler() {
-    button.state("window", {
+    button.state('window', {
         checked: false
     });
 }
