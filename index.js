@@ -70,7 +70,7 @@ function tabs_ready_handler(tab) {
     panel.port.on('respond_info', function (data) {
         console.log('Received emitted message: ' + data);
     });
-    info_lookup.get_network_info_from_url(tab.url);
+    info_lookup.get_network_info_from_url(tab.url, panel);
 }
 
 function tabs_load_handler(tab) {
