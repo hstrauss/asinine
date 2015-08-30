@@ -39,15 +39,12 @@ tabs.on('ready', tabs_ready_handler);
 tabs.on('load', tabs_load_handler);
 
 function button_click_handler(state) {
-    console.log('Clicked Button (panel is ' + (state.checked ? 'show' : 'hidden') + ')');
     if (state.checked) {
         panel.show({
             position: button
         });
-        info_lookup.get_network_info_from_url(tabs[0].url, panel);
     } else {
         panel.hide();
-        state.checked = false;
     }
 }
 
@@ -62,7 +59,6 @@ function panel_show_handler() {
     // checked: false
     // });
     // console.log('panel_show_handler()');
-    info_lookup.get_network_info_from_url(tabs[0].url, panel);
 }
 
 function tabs_activate_handler(tab) {
