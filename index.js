@@ -47,7 +47,7 @@ function button_click_handler(state) {
         info_lookup.get_network_info_from_url(tabs[0].url, panel);
     } else {
         panel.hide();
-        state.checked = false;
+        // state.checked = false;  
     }
 }
 
