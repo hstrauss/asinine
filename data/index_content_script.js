@@ -1,4 +1,6 @@
-window.onload = function () {}
+// window.onload = function () {}
+// window.onpageshow = function () {}
+// window.onpagehide = function () {}
 self.port.on('update_info', updatePanel);
 
 function updatePanel(data) {
@@ -10,6 +12,4 @@ function updatePanel(data) {
     window.getElementById('asnumbersv4').innerHTML = data.asnsv4;
     window.getElementById('asnumbersv6').innerHTML = data.asnsv6;
 }
-window.onpageshow = function () {}
-window.onpagehide = function () {}
 
